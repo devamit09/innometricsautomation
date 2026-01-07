@@ -1,6 +1,6 @@
 // =======================================================
 // INNOMETRICS AUTOMATION & CONTROLS
-// Optimized JavaScript File with Text Visibility Fixes
+// Optimized JavaScript File with Mobile Map Fixes
 // =======================================================
 
 // Configuration
@@ -16,7 +16,10 @@ const CONFIG = {
         'application/msword',
         'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
     ],
-    SLIDE_INTERVAL: 5000 // 5 seconds
+    SLIDE_INTERVAL: 5000, // 5 seconds
+    OFFICE_LATITUDE: 28.40147989453743,
+    OFFICE_LONGITUDE: 76.94422147446838,
+    OFFICE_ADDRESS: 'SS Omnia Commercial, Sector 86, Gurugram, Haryana 122012'
 };
 
 // State management
@@ -47,6 +50,7 @@ function initializePage() {
         initWhatsApp();
         initFloatingButtons();
         initLazyLoading();
+        initMaps(); // Initialize maps functionality
         
         // Update copyright year
         updateCopyrightYear();
@@ -303,7 +307,131 @@ function initSlider() {
 }
 
 // =======================================================
-// 4. CONTACT FORM HANDLING
+// 4. GOOGLE MAPS FUNCTIONS (MOBILE FIX)
+// =======================================================
+
+function initMaps() {
+    console.log('📍 Initializing maps functionality...');
+    
+    // Add click handlers to all map buttons
+    document.querySelectorAll('.open-map-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            openGoogleMaps();
+        });
+    });
+    
+    document.querySelectorAll('.open-directions-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            openDirections();
+        });
+    });
+    
+    // Add touch events for mobile
+    if ('ontouchstart' in window) {
+        const staticMaps = document.querySelectorAll('.static-map');
+        staticMaps.forEach(map => {
+            map.addEventListener('touchstart', function(e) {
+                e.preventDefault();
+                // Add touch feedback
+                this.style.opacity = '0.9';
+            }, { passive: false });
+            
+            map.addEventListener('touchend', function(e) {
+                this.style.opacity = '1';
+            }, { passive: true });
+            
+            map.addEventListener('touchmove', function(e) {
+                e.preventDefault();
+            }, { passive: false });
+        });
+    }
+    
+    console.log('✅ Maps functionality initialized');
+}
+
+function openGoogleMaps() {
+    const latitude = CONFIG.OFFICE_LATITUDE;
+    const longitude = CONFIG.OFFICE_LONGITUDE;
+    
+    // Check if device is mobile
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    
+    let mapsUrl;
+    
+    if (isMobile) {
+        // Open in native maps app
+        if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+            // iOS - Apple Maps
+            mapsUrl = `https://maps.apple.com/?q=${latitude},${longitude}&ll=${latitude},${longitude}&z=16`;
+        } else {
+            // Android - Google Maps
+            mapsUrl = `https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}`;
+        }
+    } else {
+        // Desktop - Google Maps Web
+        mapsUrl = `https://www.google.com/maps?q=${latitude},${longitude}&z=16`;
+    }
+    
+    // Open in new tab
+    window.open(mapsUrl, '_blank', 'noopener,noreferrer');
+    
+    // Show confirmation
+    showAlert(
+        '<div class="text-center">' +
+        '<i class="fas fa-map-marked-alt fa-2x text-primary mb-2"></i>' +
+        '<h5 class="mb-2">Opening Maps</h5>' +
+        '<p>Opening location in maps application...</p>' +
+        '</div>',
+        'info'
+    );
+}
+
+function openDirections() {
+    const latitude = CONFIG.OFFICE_LATITUDE;
+    const longitude = CONFIG.OFFICE_LONGITUDE;
+    const encodedAddress = encodeURIComponent(CONFIG.OFFICE_ADDRESS);
+    
+    // Check if device is mobile
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    
+    let directionsUrl;
+    
+    if (isMobile) {
+        // Mobile - Get directions
+        if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+            // iOS - Apple Maps Directions
+            directionsUrl = `https://maps.apple.com/?daddr=${encodedAddress}&dirflg=d`;
+        } else {
+            // Android - Google Maps Directions
+            directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${latitude},${longitude}&travelmode=driving`;
+        }
+    } else {
+        // Desktop - Google Maps Web Directions
+        directionsUrl = `https://www.google.com/maps/dir//${encodedAddress}/@${latitude},${longitude},16z`;
+    }
+    
+    // Open in new tab
+    window.open(directionsUrl, '_blank', 'noopener,noreferrer');
+    
+    // Show confirmation
+    showAlert(
+        '<div class="text-center">' +
+        '<i class="fas fa-directions fa-2x text-warning mb-2"></i>' +
+        '<h5 class="mb-2">Getting Directions</h5>' +
+        '<p>Opening directions in maps application...</p>' +
+        '</div>',
+        'info'
+    );
+}
+
+// Make functions globally available
+window.openGoogleMaps = openGoogleMaps;
+window.openDirections = openDirections;
+
+// =======================================================
+// 5. CONTACT FORM HANDLING
 // =======================================================
 
 function initContactForm() {
@@ -607,7 +735,7 @@ function resetForm(form) {
 }
 
 // =======================================================
-// 5. ALERTS AND NOTIFICATIONS
+// 6. ALERTS AND NOTIFICATIONS
 // =======================================================
 
 function showAlert(message, type = 'info') {
@@ -670,7 +798,7 @@ function showAlert(message, type = 'info') {
 }
 
 // =======================================================
-// 6. SMOOTH SCROLLING AND NAVIGATION
+// 7. SMOOTH SCROLLING AND NAVIGATION
 // =======================================================
 
 function initSmoothScrolling() {
@@ -744,7 +872,7 @@ function updateNavOnScroll() {
 }
 
 // =======================================================
-// 7. ANIMATIONS ON SCROLL
+// 8. ANIMATIONS ON SCROLL
 // =======================================================
 
 function initAnimations() {
@@ -776,7 +904,7 @@ function initAnimations() {
 }
 
 // =======================================================
-// 8. STATS COUNTER ANIMATION
+// 9. STATS COUNTER ANIMATION
 // =======================================================
 
 function initStatsCounter() {
@@ -811,7 +939,7 @@ function animateCounter(element, target) {
 }
 
 // =======================================================
-// 9. WHATSAPP INTEGRATION
+// 10. WHATSAPP INTEGRATION
 // =======================================================
 
 function initWhatsApp() {
@@ -841,7 +969,7 @@ function initWhatsApp() {
 }
 
 // =======================================================
-// 10. FLOATING ACTION BUTTONS
+// 11. FLOATING ACTION BUTTONS
 // =======================================================
 
 function initFloatingButtons() {
@@ -865,7 +993,7 @@ function initFloatingButtons() {
 }
 
 // =======================================================
-// 11. LAZY LOADING FOR IMAGES
+// 12. LAZY LOADING FOR IMAGES
 // =======================================================
 
 function initLazyLoading() {
@@ -899,7 +1027,7 @@ function initLazyLoading() {
 }
 
 // =======================================================
-// 12. MOBILE OPTIMIZATIONS
+// 13. MOBILE OPTIMIZATIONS
 // =======================================================
 
 function initMobileOptimizations() {
@@ -925,10 +1053,20 @@ function initMobileOptimizations() {
     
     setViewportHeight();
     window.addEventListener('resize', setViewportHeight);
+    
+    // Fix mobile map interactions
+    if ('ontouchstart' in window) {
+        // Prevent default touch behavior on map containers
+        document.querySelectorAll('.interactive-map, .static-map').forEach(element => {
+            element.addEventListener('touchmove', function(e) {
+                e.preventDefault();
+            }, { passive: false });
+        });
+    }
 }
 
 // =======================================================
-// 13. UTILITY FUNCTIONS
+// 14. UTILITY FUNCTIONS
 // =======================================================
 
 function formatFileSize(bytes) {
@@ -962,7 +1100,7 @@ function updateCopyrightYear() {
 }
 
 // =======================================================
-// 14. ERROR HANDLING
+// 15. ERROR HANDLING
 // =======================================================
 
 // Global error handler
@@ -986,7 +1124,7 @@ window.addEventListener('unhandledrejection', function(e) {
 });
 
 // =======================================================
-// 15. START EVERYTHING
+// 16. START EVERYTHING
 // =======================================================
 
 // Initialize when DOM is loaded

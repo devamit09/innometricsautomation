@@ -87,6 +87,8 @@
         .slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
         .slide.active { opacity: 1; z-index: 2; }
         .btn, .nav-link { min-height: 44px; min-width: 44px; display: inline-flex; align-items: center; justify-content: center; }
+        /* Text visibility fixes */
+        .text-light, .text-white, .card-body, p, li, span, .lead { color: #f0f0f0 !important; }
     </style>
     
     <!-- Custom CSS -->
@@ -106,24 +108,6 @@
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-  
-  <!-- Add this style block to head section -->
-<style>
-    /* Immediate text visibility fixes */
-    .text-light { color: #ffffff !important; }
-    .text-white { color: #ffffff !important; }
-    .card-body { color: #ffffff !important; }
-    p, li, span, .lead { color: #f0f0f0 !important; }
-    
-    /* Fix specific sections */
-    #about p, #about li { color: #f0f0f0 !important; }
-    .service-card p, .service-card .card-text { color: #f0f0f0 !important; }
-    .leader-card p { color: #f0f0f0 !important; }
-    .brand-list li { color: #f0f0f0 !important; }
-    
-    /* Force text visibility during page load */
-    body { color: #f0f0f0 !important; }
-</style>
 </head>
 <body>
     <!-- Navigation -->
@@ -804,7 +788,7 @@
                             </div>
                             
                             <!-- File Upload (Optional) -->
-                            <!-- <div class="mb-4">
+                            <div class="mb-4">
                                 <label class="form-label">Attach Files (Optional)</label>
                                 <div class="file-upload">
                                     <input type="file" class="form-control" id="contactFile" name="file" 
@@ -817,7 +801,7 @@
                                     </label>
                                     <div id="fileHelp" class="form-text">Maximum file size: 400KB. Allowed types: PDF, DOC, DOCX, JPG, PNG.</div>
                                 </div>
-                            </div> -->
+                            </div>
                             
                             <!-- Submit Button -->
                             <div class="text-center">
@@ -831,24 +815,61 @@
                         </form>
                     </div>
                     
-                    <!-- Map Below Form on Mobile -->
-                    <div class="map-container mt-4 d-lg-none">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.5889757451187!2d76.94422147446838!3d28.40147989453743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d3d001ccd8197%3A0xc11524f0835dc6a8!2sSS%20omnia%20sector%2086!5e0!3m2!1sen!2sin!4v1762922339832!5m2!1sen!2sin"
-                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                            title="Innometrics Automation Office Location"></iframe>
+                    <!-- Map Below Form on Mobile - UPDATED FOR MOBILE FIX -->
+                    <div class="map-container mt-4 d-lg-none interactive-map">
+                        <!-- Static Map Image (Fallback for Mobile) -->
+                        <div class="static-map" id="staticMap">
+                            <div class="static-map-placeholder">
+                                <i class="fas fa-map-marker-alt fa-3x text-warning mb-3"></i>
+                                <h5 class="mb-2">Our Office Location</h5>
+                                <p class="mb-3">SS Omnia Commercial, Sector 86, Gurugram, Haryana 122012</p>
+                            </div>
+                            <div class="map-overlay">
+                                <button class="btn btn-primary open-map-btn" onclick="openGoogleMaps()">
+                                    <i class="fas fa-map-marked-alt me-2"></i>Open in Maps
+                                </button>
+                                <button class="btn btn-outline-light open-directions-btn" onclick="openDirections()">
+                                    <i class="fas fa-directions me-2"></i>Get Directions
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             
-            <!-- Map Below on Desktop -->
+            <!-- Map Below on Desktop - UPDATED -->
             <div class="row mt-5">
                 <div class="col-12">
-                    <div class="map-container d-none d-lg-block">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.5889757451187!2d76.94422147446838!3d28.40147989453743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d3d001ccd8197%3A0xc11524f0835dc6a8!2sSS%20omnia%20sector%2086!5e0!3m2!1sen!2sin!4v1762922339832!5m2!1sen!2sin"
-                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                            title="Innometrics Automation Office Location"></iframe>
+                    <div class="map-container interactive-map">
+                        <!-- Static Map for all devices -->
+                        <div class="static-map" id="staticMapDesktop">
+                            <div class="static-map-placeholder">
+                                <i class="fas fa-map-marker-alt fa-4x text-warning mb-3"></i>
+                                <h4 class="mb-3">Visit Our Office</h4>
+                                <p class="lead mb-4">SS Omnia Commercial, Sector 86, Gurugram, Haryana 122012</p>
+                                <div class="d-flex flex-wrap justify-content-center gap-3 mb-4">
+                                    <button class="btn btn-primary btn-lg open-map-btn" onclick="openGoogleMaps()">
+                                        <i class="fas fa-map-marked-alt me-2"></i>Open in Google Maps
+                                    </button>
+                                    <button class="btn btn-outline-light btn-lg open-directions-btn" onclick="openDirections()">
+                                        <i class="fas fa-directions me-2"></i>Get Directions
+                                    </button>
+                                </div>
+                                <small class="text-muted">
+                                    <i class="fas fa-info-circle me-1"></i>
+                                    Clicking will open your device's maps application
+                                </small>
+                            </div>
+                        </div>
+                        
+                        <!-- Desktop Map Iframe (Hidden on Mobile) -->
+                        <div class="desktop-map d-none d-lg-block">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.5889757451187!2d76.94422147446838!3d28.40147989453743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d3d001ccd8197%3A0xc11524f0835dc6a8!2sSS%20omnia%20sector%2086!5e0!3m2!1sen!2sin!4v1762922339832!5m2!1sen!2sin"
+                                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                                title="Innometrics Automation Office Location">
+                            </iframe>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -906,7 +927,7 @@
 
     <!-- Floating Buttons -->
     <div class="float-buttons">
-        <a href="tel:+917008959963" class="call-btn" title="Call Now" aria-label="Call Innometrics Automation & Controls">
+        <a href="tel:+919730013049" class="call-btn" title="Call Now" aria-label="Call Innometrics Automation & Controls">
             <i class="fas fa-phone" aria-hidden="true"></i>
         </a>
         <a href="#" class="whatsapp-btn" title="Chat on WhatsApp" aria-label="Chat with Innometrics on WhatsApp" onclick="openWhatsApp()">
@@ -957,5 +978,60 @@
     
     <!-- Custom JS -->
     <script src="script.js"></script>
+    
+    <!-- Mobile Map Functions -->
+    <script>
+        // Mobile Maps Functions
+        function openGoogleMaps() {
+            const latitude = 28.40147989453743;
+            const longitude = 76.94422147446838;
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            
+            let mapsUrl;
+            if (isMobile) {
+                if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+                    mapsUrl = `https://maps.apple.com/?q=${latitude},${longitude}&ll=${latitude},${longitude}&z=16`;
+                } else {
+                    mapsUrl = `https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}`;
+                }
+            } else {
+                mapsUrl = `https://www.google.com/maps?q=${latitude},${longitude}&z=16`;
+            }
+            
+            window.open(mapsUrl, '_blank', 'noopener,noreferrer');
+        }
+        
+        function openDirections() {
+            const latitude = 28.40147989453743;
+            const longitude = 76.94422147446838;
+            const address = "SS+Omnia+Commercial,+Sector+86,+Gurugram,+Haryana+122012";
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            
+            let directionsUrl;
+            if (isMobile) {
+                if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+                    directionsUrl = `https://maps.apple.com/?daddr=${address}&dirflg=d`;
+                } else {
+                    directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${latitude},${longitude}&travelmode=driving`;
+                }
+            } else {
+                directionsUrl = `https://www.google.com/maps/dir//${address}/@${latitude},${longitude},16z`;
+            }
+            
+            window.open(directionsUrl, '_blank', 'noopener,noreferrer');
+        }
+        
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add click handlers to map buttons
+            document.querySelectorAll('.open-map-btn').forEach(btn => {
+                btn.addEventListener('click', openGoogleMaps);
+            });
+            
+            document.querySelectorAll('.open-directions-btn').forEach(btn => {
+                btn.addEventListener('click', openDirections);
+            });
+        });
+    </script>
 </body>
 </html>
