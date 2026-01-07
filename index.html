@@ -788,7 +788,7 @@
                             </div>
                             
                             <!-- File Upload (Optional) -->
-                            <div class="mb-4">
+                            <!-- <div class="mb-4">
                                 <label class="form-label">Attach Files (Optional)</label>
                                 <div class="file-upload">
                                     <input type="file" class="form-control" id="contactFile" name="file" 
@@ -801,7 +801,7 @@
                                     </label>
                                     <div id="fileHelp" class="form-text">Maximum file size: 400KB. Allowed types: PDF, DOC, DOCX, JPG, PNG.</div>
                                 </div>
-                            </div>
+                            </div> -->
                             
                             <!-- Submit Button -->
                             <div class="text-center">
@@ -838,11 +838,11 @@
             </div>
             
             <!-- Map Below on Desktop - UPDATED -->
-            <div class="row mt-5">
+            <!-- <div class="row mt-5">
                 <div class="col-12">
                     <div class="map-container interactive-map">
-                        <!-- Static Map for all devices -->
-                        <div class="static-map" id="staticMapDesktop">
+                         Static Map for all devices -->
+                        <!-- <div class="static-map" id="staticMapDesktop">
                             <div class="static-map-placeholder">
                                 <i class="fas fa-map-marker-alt fa-4x text-warning mb-3"></i>
                                 <h4 class="mb-3">Visit Our Office</h4>
@@ -860,21 +860,21 @@
                                     Clicking will open your device's maps application
                                 </small>
                             </div>
-                        </div>
+                        </div> -->
                         
-                        <!-- Desktop Map Iframe (Hidden on Mobile) -->
+                        <!-- Desktop Map Iframe (Hidden on Mobile)
                         <div class="desktop-map d-none d-lg-block">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.5889757451187!2d76.94422147446838!3d28.40147989453743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d3d001ccd8197%3A0xc11524f0835dc6a8!2sSS%20omnia%20sector%2086!5e0!3m2!1sen!2sin!4v1762922339832!5m2!1sen!2sin"
                                 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                                 title="Innometrics Automation Office Location">
                             </iframe>
-                        </div>
-                    </div>
+                        </div> -->
+                    <!-- </div>
                 </div>
-            </div>
-        </div>
-    </section>
+             </div> -->
+        </div> 
+    </section> 
 
     <!-- Footer -->
     <footer class="pt-5" aria-label="Footer">
@@ -979,59 +979,6 @@
     <!-- Custom JS -->
     <script src="script.js"></script>
     
-    <!-- Mobile Map Functions -->
-    <script>
-        // Mobile Maps Functions
-        function openGoogleMaps() {
-            const latitude = 28.40147989453743;
-            const longitude = 76.94422147446838;
-            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-            
-            let mapsUrl;
-            if (isMobile) {
-                if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-                    mapsUrl = `https://maps.apple.com/?q=${latitude},${longitude}&ll=${latitude},${longitude}&z=16`;
-                } else {
-                    mapsUrl = `https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}`;
-                }
-            } else {
-                mapsUrl = `https://www.google.com/maps?q=${latitude},${longitude}&z=16`;
-            }
-            
-            window.open(mapsUrl, '_blank', 'noopener,noreferrer');
-        }
-        
-        function openDirections() {
-            const latitude = 28.40147989453743;
-            const longitude = 76.94422147446838;
-            const address = "SS+Omnia+Commercial,+Sector+86,+Gurugram,+Haryana+122012";
-            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-            
-            let directionsUrl;
-            if (isMobile) {
-                if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-                    directionsUrl = `https://maps.apple.com/?daddr=${address}&dirflg=d`;
-                } else {
-                    directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${latitude},${longitude}&travelmode=driving`;
-                }
-            } else {
-                directionsUrl = `https://www.google.com/maps/dir//${address}/@${latitude},${longitude},16z`;
-            }
-            
-            window.open(directionsUrl, '_blank', 'noopener,noreferrer');
-        }
-        
-        // Initialize on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add click handlers to map buttons
-            document.querySelectorAll('.open-map-btn').forEach(btn => {
-                btn.addEventListener('click', openGoogleMaps);
-            });
-            
-            document.querySelectorAll('.open-directions-btn').forEach(btn => {
-                btn.addEventListener('click', openDirections);
-            });
-        });
-    </script>
+    
 </body>
 </html>
