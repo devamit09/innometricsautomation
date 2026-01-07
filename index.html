@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <title>Innometrics Automation & Controls | Industrial Automation Solutions</title>
+    <meta name="description" content="Leading Industrial Automation Solutions - PLC Programming, SCADA Systems, HMI Development, Control Panel Design, Robotics Integration. 500+ Projects Completed.">
+    
+    <meta name="keywords" content="industrial automation, PLC programming, SCADA systems, HMI development, control panel design, robotics integration, automation solutions, Siemens PLC, Allen Bradley, Mitsubishi, process automation, manufacturing automation">
+    
+    <meta name="author" content="Innometrics Automation & Controls">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://innometricsautomation.com/">
+    <meta property="og:title" content="Innometrics Automation & Controls | Industrial Automation Experts">
+    <meta property="og:description" content="Industrial Automation Solutions - PLC Programming, SCADA, HMI, Control Panels for Manufacturing Industries">
+    <meta property="og:image" content="https://innometricsautomation.com/img/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://innometricsautomation.com/">
+    <meta property="twitter:title" content="Innometrics Automation & Controls">
+    <meta property="twitter:description" content="Industrial Automation Solutions Provider - PLC, SCADA, HMI, Robotics">
+    <meta property="twitter:image" content="https://innometricsautomation.com/img/twitter-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://innometricsautomation.com/">
+
+    <!-- Structured Data / JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Innometrics Automation & Controls",
+        "url": "https://innometricsautomation.com/",
+        "logo": "https://innometricsautomation.com/img/logo.png",
+        "description": "Industrial Automation Solutions Provider specializing in PLC Programming, SCADA Systems, HMI Development and Control Panel Design",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "711, 7th Floor, SS Omnia Commercial, Sector 86",
+            "addressLocality": "Gurugram",
+            "addressRegion": "Haryana",
+            "postalCode": "122012",
+            "addressCountry": "IN"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-9730013049",
+            "contactType": "Customer Service",
+            "email": "sales@innometricsautomation.com",
+            "areaServed": "IN",
+            "availableLanguage": ["English", "Hindi"]
+        },
+        "sameAs": [
+            "https://www.linkedin.com/company/innometrics-automation",
+            "https://twitter.com/innometrics",
+            "https://www.facebook.com/innometricsautomation"
+        ]
+    }
+    </script>
+
+    <!-- Robots Meta -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="IN-HR">
+    <meta name="geo.placename" content="Gurugram">
+    <meta name="geo.position" content="28.4595;77.0266">
+    <meta name="ICBM" content="28.4595, 77.0266">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Critical CSS (Above the fold) -->
+    <style>
+        /* Critical styles for initial render */
+        * { box-sizing: border-box; }
+        html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+        body { margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; overflow-x: hidden; }
+        img { max-width: 100%; height: auto; }
+        .navbar { transition: all 0.3s ease; }
+        .hero-slider { position: relative; overflow: hidden; }
+        .slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .slide.active { opacity: 1; z-index: 2; }
+        .btn, .nav-link { min-height: 44px; min-width: 44px; display: inline-flex; align-items: center; justify-content: center; }
+    </style>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- For Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+  
+  <!-- Add this style block to head section -->
+<style>
+    /* Immediate text visibility fixes */
+    .text-light { color: #ffffff !important; }
+    .text-white { color: #ffffff !important; }
+    .card-body { color: #ffffff !important; }
+    p, li, span, .lead { color: #f0f0f0 !important; }
+    
+    /* Fix specific sections */
+    #about p, #about li { color: #f0f0f0 !important; }
+    .service-card p, .service-card .card-text { color: #f0f0f0 !important; }
+    .leader-card p { color: #f0f0f0 !important; }
+    .brand-list li { color: #f0f0f0 !important; }
+    
+    /* Force text visibility during page load */
+    body { color: #f0f0f0 !important; }
+</style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" aria-label="Main Navigation">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#" aria-label="Innometrics Automation & Controls Home">
+                <img src="https://img1.wsimg.com/isteam/ip/479937e0-1a04-4dd1-869b-d26ee9f6881e/WhatsApp%20Image%202025-08-05%20at%204.48.57%20-6a865c5.jpeg"
+                     alt="Innometrics Automation & Controls Logo" 
+                     width="50" 
+                     height="50"
+                     loading="eager"
+                     class="img-fluid">
+                <div class="ms-3">
+                    <h4 class="mb-0" style="color: #217170;">Innometrics</h4>
+                    <p class="mb-0 small">Automation & Controls</p>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#leadership">Leadership</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#industries">Industries</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#careers">Careers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Slider Section -->
+    <section class="hero-slider" id="home" aria-label="Company Introduction Slides">
+        <div class="slider-container">
+            <!-- Slide 1: Company Introduction -->
+            <div class="slide active" style="background-image: url('https://img1.wsimg.com/isteam/ip/078a45a0-ef3e-488b-971f-d790a36a9ddc/OIP%20(5).jpg');">
+                <div class="slide-overlay">
+                    <div class="slider-content">
+                        <h1>Smart Industrial Automation Solutions</h1>
+                        <p class="sub-headline">PLC Programming • SCADA • HMI • Control Panels</p>
+                        <p class="short-text">We deliver reliable, efficient, and future-ready automation solutions for modern industries.</p>
+                        <a href="#contact" class="btn btn-primary btn-lg">
+                            <i class="fas fa-calendar-check me-2" aria-hidden="true"></i>Get a Free Consultation
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 2: PLC Programming Expertise -->
+            <div class="slide" style="background-image: url('https://media.gettyimages.com/id/2210278635/photo/advanced-robotics-operates-in-a-high-tech-assembly-line-for-electronic-devices-at-a.webp?b=1&s=612x612&w=0&k=20&c=0ZMoLmlkIl2i1Pd3p8GXJtHTczYiXcoTmUHTph31RAM=');">
+                <div class="slide-overlay">
+                    <div class="slider-content">
+                        <h1>Expert PLC Programming Services</h1>
+                        <p class="sub-headline">Mitsubishi • Siemens • Allen-Bradley • Delta</p>
+                        <p class="short-text">Customized PLC logic, troubleshooting, and optimization to improve productivity and reduce downtime.</p>
+                        <a href="#services" class="btn btn-primary btn-lg">
+                            <i class="fas fa-cogs me-2" aria-hidden="true"></i>Explore Our PLC Services
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 3: SCADA & HMI Solutions -->
+            <div class="slide" style="background-image: url('https://img1.wsimg.com/isteam/ip/078a45a0-ef3e-488b-971f-d790a36a9ddc/AI-based%20quality%20control%20system%20listens%20for%20cl.png');">
+                <div class="slide-overlay">
+                    <div class="slider-content">
+                        <h1>SCADA & HMI System Integration</h1>
+                        <p class="sub-headline">Real-time Monitoring • Control • Data Logging</p>
+                        <p class="short-text">User-friendly HMI and powerful SCADA systems for complete plant visibility and control.</p>
+                        <a href="#services" class="btn btn-primary btn-lg">
+                            <i class="fas fa-desktop me-2" aria-hidden="true"></i>View Automation Solutions
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 4: Control Panels & Industrial Solutions -->
+            <div class="slide" style="background-image: url('https://img1.wsimg.com/isteam/ip/078a45a0-ef3e-488b-971f-d790a36a9ddc/blob-1d62f6c.png');">
+                <div class="slide-overlay">
+                    <div class="slider-content">
+                        <h1>Industrial Control Panel Design & Commissioning</h1>
+                        <p class="sub-headline">PLC Panels • MCC Panels • VFD Panels</p>
+                        <p class="short-text">High-quality panel designing, wiring, testing, and onsite commissioning as per industrial standards.</p>
+                        <a href="#contact" class="btn btn-primary btn-lg">
+                            <i class="fas fa-file-invoice-dollar me-2" aria-hidden="true"></i>Request a Quote
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 5: Trust & Support -->
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+                <div class="slide-overlay">
+                    <div class="slider-content">
+                        <h1>Your Trusted Automation Partner</h1>
+                        <p class="sub-headline">Quality • Safety • On-Time Delivery</p>
+                        <p class="short-text">Supporting industries with reliable automation, technical support, and long-term partnerships.</p>
+                        <a href="#contact" class="btn btn-primary btn-lg">
+                            <i class="fas fa-handshake me-2" aria-hidden="true"></i>Contact Innometrics
+                        </a>
+                    </div>
+                </div>
+            </div>
+ 
+            <!-- Slide 6: Additional Content -->
+            <div class="slide" style="background-image: url('https://img1.wsimg.com/isteam/ip/479937e0-1a04-4dd1-869b-d26ee9f6881e/ChatGPT%20Image%20Jan%206%2C%202026%2C%2001_37_40%20PM.png/:/rs=h:175,m');">
+                <div class="slide-overlay">
+                    <div class="slider-content">
+                        <h1>Innovation in Automation</h1>
+                        <p class="sub-headline">Cutting-edge Solutions • Future-ready Technology</p>
+                        <p class="short-text">Stay ahead with our innovative automation solutions that drive efficiency and productivity.</p>
+                        <a href="#services" class="btn btn-primary btn-lg">
+                            <i class="fas fa-lightbulb me-2" aria-hidden="true"></i>Discover Innovations
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slider Controls -->
+            <button class="slider-arrow prev" onclick="changeSlide(-1)" aria-label="Previous slide">
+                <i class="fas fa-chevron-left" aria-hidden="true"></i>
+            </button>
+            <button class="slider-arrow next" onclick="changeSlide(1)" aria-label="Next slide">
+                <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            </button>
+            
+            <div class="slider-controls" aria-label="Slide navigation dots">
+                <button class="slider-dot active" onclick="goToSlide(0)" aria-label="Go to slide 1"></button>
+                <button class="slider-dot" onclick="goToSlide(1)" aria-label="Go to slide 2"></button>
+                <button class="slider-dot" onclick="goToSlide(2)" aria-label="Go to slide 3"></button>
+                <button class="slider-dot" onclick="goToSlide(3)" aria-label="Go to slide 4"></button>
+                <button class="slider-dot" onclick="goToSlide(4)" aria-label="Go to slide 5"></button>
+                <button class="slider-dot" onclick="goToSlide(5)" aria-label="Go to slide 6"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-5" id="about" aria-labelledby="about-heading">
+        <div class="container">
+            <h2 class="text-center section-title" id="about-heading">About Us</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h4 class="mb-0" style="color: #217170;">Innometrics</h4>
+                    <h5 class="mb-4"><small>Automation & Controls</small></h5>
+                    
+                    <p class="mb-3">We are a leading provider of industrial automation and control solutions, dedicated to enhancing productivity, efficiency, and reliability. We deliver turnkey automation projects, customized control systems, and Industry 4.0 solutions across multiple industries.</p>
+                    <p>Since its establishment in 2022, we have travelled a long way in the field of automation. We are an emerging name as a conspicuous solution provider for Process Automation, Engineering Automation, Instrumentation, and Machine Automation.</p>
+                    
+                    <div class="mt-4">
+                        <h5 class="text-warning mb-3">Our Expertise</h5>
+                        <div class="row">
+                            <div class="col-6">
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2" aria-hidden="true"></i>PLC Programming</li>
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2" aria-hidden="true"></i>HMI Development</li>
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2" aria-hidden="true"></i>SCADA Systems</li>
+                                </ul>
+                            </div>
+                            <div class="col-6">
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2" aria-hidden="true"></i>Robotics Integration</li>
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2" aria-hidden="true"></i>Process Control</li>
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2" aria-hidden="true"></i>IoT Solutions</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-image-container animate-on-scroll">
+                        <img src="https://media.gettyimages.com/id/1488640897/photo/robotics-engineering-and-african-man-on-tablet-for-manufacturing-ai-futuristic-or-tech.webp?b=1&s=612x612&w=0&k=20&c=yb_XFqXA_Icf_4BV7m_badAZz4TwNjhN9P6SU_VH-6s="
+                            alt="Robotics Engineering and Automation Expert Working on Tablet" 
+                            loading="lazy"
+                            width="600"
+                            height="400"
+                            class="about-image img-fluid">
+                    </div>
+                    <div class="text-center mt-3">
+                        <small class="text-muted">Expert robotics engineering and automation solutions for modern manufacturing</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section class="leadership-section py-5" id="leadership" aria-labelledby="leadership-heading">
+        <div class="container">
+            <h2 class="text-center section-title" id="leadership-heading">Our Leadership Team</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="leader-card p-4 text-center animate-on-scroll">
+                        <div class="leader-image mb-3">
+                            <img src="https://img1.wsimg.com/isteam/ip/479937e0-1a04-4dd1-869b-d26ee9f6881e/img1.png"
+                                alt="Bikranta Sahu" 
+                                loading="lazy"
+                                width="140"
+                                height="140"
+                                class="img-fluid">
+                        </div>
+                        <h4>Bikranta Sahu</h4>
+                        <p class="text-warning fw-bold">Managing Director</p>
+                        <p class="small">15+ yrs in Industrial Automation & Controls</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="leader-card p-4 text-center animate-on-scroll">
+                        <div class="leader-image mb-3">
+                            <img src="https://img1.wsimg.com/isteam/ip/479937e0-1a04-4dd1-869b-d26ee9f6881e/img2.jpeg"
+                                alt="Ravi Prakash Singh" 
+                                loading="lazy"
+                                width="140"
+                                height="140"
+                                class="img-fluid">
+                        </div>
+                        <h4>Ravi Prakash Singh</h4>
+                        <p class="text-warning fw-bold">Managing Director</p>
+                        <p class="small">10+ yrs in Industrial Automation & Controls</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="leader-card p-4 text-center animate-on-scroll">
+                        <div class="leader-image mb-3">
+                            <img src="https://img1.wsimg.com/isteam/ip/479937e0-1a04-4dd1-869b-d26ee9f6881e/img4.JPG"
+                                alt="Rohit Yadav" 
+                                loading="lazy"
+                                width="140"
+                                height="140"
+                                class="img-fluid">
+                        </div>
+                        <h4>Rohit Yadav</h4>
+                        <p class="text-warning fw-bold">Project Manager</p>
+                        <p class="small">7+ yrs in Industrial Automation & Controls</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section" id="stats" aria-labelledby="stats-heading">
+        <div class="container">
+            <h2 class="visually-hidden" id="stats-heading">Our Achievements</h2>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="stat-item animate-on-scroll">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-text">Control Engineers</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="stat-item animate-on-scroll">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-text">Skilled Electricians</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="stat-item animate-on-scroll">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-text">Projects Completed</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="stat-item animate-on-scroll">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-text">Happy Clients</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-5" id="services" aria-labelledby="services-heading">
+        <div class="container">
+            <h2 class="text-center section-title" id="services-heading">Our Core Services</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="service-card card h-100 shadow-sm animate-on-scroll">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-code service-icon" aria-hidden="true"></i>
+                            <h4 class="card-title">Application Engineering</h4>
+                            <p class="card-text">Logic, HMI & SCADA development as per customer functional design specification (FDS).</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card card h-100 shadow-sm animate-on-scroll">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-sync-alt service-icon" aria-hidden="true"></i>
+                            <h4 class="card-title">PLC Migration</h4>
+                            <p class="card-text">Upgrade original schematics, convert ladder logic to new platform and fully test control systems.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card card h-100 shadow-sm animate-on-scroll">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-cogs service-icon" aria-hidden="true"></i>
+                            <h4 class="card-title">Control Panel Design</h4>
+                            <p class="card-text">Design, optimize, and implement control systems integration strategy.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card card h-100 shadow-sm animate-on-scroll">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-robot service-icon" aria-hidden="true"></i>
+                            <h4 class="card-title">Robotics & Motion Control</h4>
+                            <p class="card-text">Robot controller interfacing with PLC for various industrial applications.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card card h-100 shadow-sm animate-on-scroll">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-industry service-icon" aria-hidden="true"></i>
+                            <h4 class="card-title">Process Automation</h4>
+                            <p class="card-text">Continuously manage, expand, and update control systems implementation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card card h-100 shadow-sm animate-on-scroll">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-tools service-icon" aria-hidden="true"></i>
+                            <h4 class="card-title">Maintenance & Support</h4>
+                            <p class="card-text">Establish controls philosophy and provide ongoing support for all systems.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industrial Automation Services Section -->
+    <section class="automation-services py-5" aria-labelledby="automation-heading">
+        <div class="container">
+            <h2 class="text-center section-title" id="automation-heading">⚙️ Industrial Automation Services</h2>
+            <p class="text-center lead mb-5">We deliver end-to-end automation solutions — from <strong>PLC Programming</strong> and <strong>HMI Development</strong> to <strong>System Integration</strong> — empowering industries with efficiency, reliability, and smart control systems.</p>
+
+            <div class="row justify-content-center">
+                <div class="col-md-5 animate-on-scroll">
+                    <div class="p-4 rounded brand-section">
+                        <h4 class="text-warning border-bottom pb-2 mb-3">Supported Brands</h4>
+                        <ul class="brand-list">
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Mitsubishi</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Allen Bradley</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Siemens</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Omron</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Delta</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Schneider Electric</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-5 animate-on-scroll">
+                    <div class="p-4 rounded brand-section">
+                        <h4 class="text-warning border-bottom pb-2 mb-3">Our Capabilities</h4>
+                        <ul class="brand-list">
+                            <li><i class="fas fa-check" aria-hidden="true"></i> PLC Programming</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> HMI Graphic Development</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> VFD Installation & Commissioning</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Industrial Networking</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Control System Architecture</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Servo System Configuration</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Control System Design Services</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Communication Networks & Field Wiring</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="industries-section py-5" id="industries" aria-labelledby="industries-heading">
+        <div class="container">
+            <h2 class="text-center section-title" id="industries-heading">Industries We Serve</h2>
+            <div class="row g-3">
+                <div class="col-md-4 col-sm-6">
+                    <div class="industry-card text-center p-4 animate-on-scroll">
+                        <i class="fas fa-car industry-icon" aria-hidden="true"></i>
+                        <h5>Automotive & Manufacturing</h5>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="industry-card text-center p-4 animate-on-scroll">
+                        <i class="fas fa-oil-well industry-icon" aria-hidden="true"></i>
+                        <h5>Oil & Gas</h5>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="industry-card text-center p-4 animate-on-scroll">
+                        <i class="fas fa-bolt industry-icon" aria-hidden="true"></i>
+                        <h5>Power & Energy</h5>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="industry-card text-center p-4 animate-on-scroll">
+                        <i class="fas fa-utensils industry-icon" aria-hidden="true"></i>
+                        <h5>Food & Beverages</h5>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="industry-card text-center p-4 animate-on-scroll">
+                        <i class="fas fa-tint industry-icon" aria-hidden="true"></i>
+                        <h5>Water & Wastewater Treatment</h5>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="industry-card text-center p-4 animate-on-scroll">
+                        <i class="fas fa-flask industry-icon" aria-hidden="true"></i>
+                        <h5>Pharmaceuticals & Chemicals</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="py-5" id="clients" aria-labelledby="clients-heading">
+        <div class="container">
+            <h2 class="text-center section-title" id="clients-heading">Our Clients</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-6 col-md-3 col-lg-2 text-center">
+                    <img src="https://img1.wsimg.com/isteam/ip/479937e0-1a04-4dd1-869b-d26ee9f6881e/automag.png"
+                        alt="Automag" 
+                        loading="lazy"
+                        width="120"
+                        height="60"
+                        class="img-fluid client-logo animate-on-scroll">
+                </div>
+                <div class="col-6 col-md-3 col-lg-2 text-center">
+                    <img src="https://img1.wsimg.com/isteam/ip/479937e0-1a04-4dd1-869b-d26ee9f6881e/Bellsonica.png"
+                        alt="Bellsonica" 
+                        loading="lazy"
+                        width="120"
+                        height="60"
+                        class="img-fluid client-logo animate-on-scroll">
+                </div>
+                <div class="col-6 col-md-3 col-lg-2 text-center">
+                    <img src="https://img1.wsimg.com/isteam/ip/479937e0-1a04-4dd1-869b-d26ee9f6881e/faith-automation.png"
+                        alt="Faith Automation" 
+                        loading="lazy"
+                        width="120"
+                        height="60"
+                        class="img-fluid client-logo animate-on-scroll">
+                </div>
+                <div class="col-6 col-md-3 col-lg-2 text-center">
+                    <img src="https://img1.wsimg.com/isteam/ip/479937e0-1a04-4dd1-869b-d26ee9f6881e/nkc.png" 
+                        alt="NKC"
+                        loading="lazy"
+                        width="120"
+                        height="60"
+                        class="img-fluid client-logo animate-on-scroll">
+                </div>
+                <div class="col-6 col-md-3 col-lg-2 text-center">
+                    <img src="https://img1.wsimg.com/isteam/ip/479937e0-1a04-4dd1-869b-d26ee9f6881e/kubota.png"
+                        alt="Kubota" 
+                        loading="lazy"
+                        width="120"
+                        height="60"
+                        class="img-fluid client-logo animate-on-scroll">
+                </div>
+                <div class="col-6 col-md-3 col-lg-2 text-center">
+                    <img src="https://img1.wsimg.com/isteam/ip/479937e0-1a04-4dd1-869b-d26ee9f6881e/Bajaj.png"
+                        alt="Bajaj" 
+                        loading="lazy"
+                        width="120"
+                        height="60"
+                        class="img-fluid client-logo animate-on-scroll">
+                </div>
+                <div class="col-6 col-md-3 col-lg-2 text-center">
+                    <img src="https://img1.wsimg.com/isteam/ip/479937e0-1a04-4dd1-869b-d26ee9f6881e/marutisuzuki.png"
+                        alt="Maruti Suzuki" 
+                        loading="lazy"
+                        width="120"
+                        height="60"
+                        class="img-fluid client-logo animate-on-scroll">
+                </div>
+                <div class="col-6 col-md-3 col-lg-2 text-center">
+                    <img src="https://img1.wsimg.com/isteam/ip/479937e0-1a04-4dd1-869b-d26ee9f6881e/Difacto.png"
+                        alt="Difacto Robotics" 
+                        loading="lazy"
+                        width="120"
+                        height="60"
+                        class="img-fluid client-logo animate-on-scroll">
+                </div>
+                <div class="col-6 col-md-3 col-lg-2 text-center">
+                    <img src="https://img1.wsimg.com/isteam/ip/479937e0-1a04-4dd1-869b-d26ee9f6881e/hitachi.png"
+                        alt="Hitachi" 
+                        loading="lazy"
+                        width="120"
+                        height="60"
+                        class="img-fluid client-logo animate-on-scroll">
+                </div>
+                <div class="col-6 col-md-3 col-lg-2 text-center">
+                    <img src="https://img1.wsimg.com/isteam/ip/479937e0-1a04-4dd1-869b-d26ee9f6881e/comau.png"
+                        alt="Comau" 
+                        loading="lazy"
+                        width="120"
+                        height="60"
+                        class="img-fluid client-logo animate-on-scroll">
+                </div>
+                <div class="col-6 col-md-3 col-lg-2 text-center">
+                    <img src="https://img1.wsimg.com/isteam/ip/479937e0-1a04-4dd1-869b-d26ee9f6881e/honda.png"
+                        alt="Honda" 
+                        loading="lazy"
+                        width="120"
+                        height="60"
+                        class="img-fluid client-logo animate-on-scroll">
+                </div>
+                <div class="col-6 col-md-3 col-lg-2 text-center">
+                    <img src="https://img1.wsimg.com/isteam/ip/479937e0-1a04-4dd1-869b-d26ee9f6881e/hirotec.png"
+                        alt="Hirotec" 
+                        loading="lazy"
+                        width="120"
+                        height="60"
+                        class="img-fluid client-logo animate-on-scroll">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Section -->
+    <section class="career-section" id="careers" aria-labelledby="careers-heading">
+        <div class="container">
+            <h2 class="text-center section-title" id="careers-heading">Career Opportunities</h2>
+            <p class="text-center lead mb-5">Join our team of automation experts and grow your career with us</p>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="career-form animate-on-scroll">
+                        <h3 class="mb-4">Apply Now</h3>
+                        
+                        <!-- HR Contact Information -->
+                        <div class="hr-contact-alert animate-on-scroll">
+                            <div class="d-flex align-items-start">
+                                <i class="fas fa-envelope me-3 fa-lg text-primary mt-1" aria-hidden="true"></i>
+                                <div>
+                                    <h6 class="mb-2">Connect With Our HR Team</h6>
+                                    <p class="mb-1">
+                                        <strong>Email:</strong>
+                                        <a href="mailto:hr@innometricsautomation.com" class="text-decoration-none">
+                                            hr@innometricsautomation.com
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section with Responsive Form -->
+    <section class="contact-section py-5" id="contact" aria-labelledby="contact-heading">
+        <div class="container">
+            <h2 class="text-center section-title" id="contact-heading">Contact Us</h2>
+            <div class="row g-4">
+                <!-- Contact Information Column -->
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h4 class="text-warning mb-4">Get In Touch</h4>
+                    <div class="mb-4">
+                        <p class="mb-3"><i class="fas fa-phone text-warning me-2" aria-hidden="true"></i> +91 9730013049, +91 7503020064, +91 8445885779</p>
+                        <p class="mb-3"><i class="fas fa-envelope text-warning me-2" aria-hidden="true"></i>
+                            <a href="mailto:sales@innometricsautomation.com" class="text-decoration-none text-light">
+                                sales@innometricsautomation.com
+                            </a>
+                        </p>
+                        <p class="mb-3"><i class="fas fa-envelope text-warning me-2" aria-hidden="true"></i>
+                            <a href="mailto:hr@innometricsautomation.com" class="text-decoration-none text-light">
+                                hr@innometricsautomation.com
+                            </a> (HR Enquiries)
+                        </p>
+
+                        <p><i class="fas fa-map-marker-alt text-warning me-2" aria-hidden="true"></i>
+                            <span class="fw-bold">Regd. Office:</span> 3rd floor, Shop No. 22, H.NO. 30,            
+                                 ShivMandir, Carterpuri, 
+                                 Gurugram-122001 (Haryana)
+                        </p>
+                        <p class="mb-0"><i class="fas fa-map-marker-alt text-warning me-2" aria-hidden="true"></i>
+                            <span class="fw-bold">Corporate Office:</span> 711, 7th Floor, SS Omnia Commercial, Sector 86, Gurugram, Haryana 122012
+                        </p>
+                    </div>
+                    <h5 class="text-warning mt-4 mb-3">Business Hours</h5>
+                    <p class="mb-2">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                    <p class="mb-2">Saturday: 10:00 AM - 2:00 PM</p>
+                    <p class="mb-0">Sunday: Closed</p>
+                    
+                    <!-- Social Media Links -->
+                    <div class="mt-4">
+                        <h5 class="text-warning mb-3">Follow Us</h5>
+                        <div class="d-flex gap-3">
+                            <a href="https://www.linkedin.com/company/innometrics-automation" class="social-icon" title="LinkedIn" aria-label="Visit our LinkedIn page">
+                                <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://www.facebook.com/innometricsautomation" class="social-icon" title="Facebook" aria-label="Visit our Facebook page">
+                                <i class="fab fa-facebook fa-2x" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://twitter.com/innometrics" class="social-icon" title="Twitter" aria-label="Visit our Twitter page">
+                                <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" class="social-icon" title="Instagram" aria-label="Visit our Instagram page">
+                                <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form Column -->
+                <div class="col-lg-6">
+                    <div class="contact-form-container">
+                        <h4 class="text-warning mb-4">Send us a Message</h4>
+                        <p class="mb-4">Have questions about our automation solutions? Fill out the form below and our team will get back to you within 24 hours.</p>
+                        
+                        <form id="contactForm" class="contact-form" aria-label="Contact Form">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="contactName" class="form-label required">Full Name</label>
+                                    <input type="text" class="form-control" id="contactName" name="name" required 
+                                           placeholder="Enter your full name"
+                                           aria-required="true">
+                                    <div class="invalid-feedback">Please enter your name</div>
+                                </div>
+                                
+                                <div class="col-md-6 mb-3">
+                                    <label for="contactEmail" class="form-label required">Email Address</label>
+                                    <input type="email" class="form-control" id="contactEmail" name="email" required 
+                                           placeholder="Enter your email address"
+                                           aria-required="true">
+                                    <div class="invalid-feedback">Please enter a valid email</div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="contactPhone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="contactPhone" name="phone" 
+                                           placeholder="Enter your phone number"
+                                           inputmode="tel">
+                                </div>
+                                
+                                <div class="col-md-6 mb-3">
+                                    <label for="contactCompany" class="form-label">Company Name</label>
+                                    <input type="text" class="form-control" id="contactCompany" name="company" 
+                                           placeholder="Enter your company name">
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="contactSubject" class="form-label required">Subject</label>
+                                <select class="form-control" id="contactSubject" name="subject" required aria-required="true">
+                                    <option value="">Select a subject</option>
+                                    <option value="General Inquiry">General Inquiry</option>
+                                    <option value="Service Request">Service Request</option>
+                                    <option value="Quote Request">Quote Request</option>
+                                    <option value="Technical Support">Technical Support</option>
+                                    <option value="Partnership">Partnership</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                <div class="invalid-feedback">Please select a subject</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="contactMessage" class="form-label required">Message</label>
+                                <textarea class="form-control" id="contactMessage" name="message" rows="5" required 
+                                          placeholder="Tell us about your automation needs..."
+                                          aria-required="true"></textarea>
+                                <div class="invalid-feedback">Please enter your message</div>
+                                <div class="char-counter">0/1000</div>
+                            </div>
+                            
+                            <!-- File Upload (Optional) -->
+                            <!-- <div class="mb-4">
+                                <label class="form-label">Attach Files (Optional)</label>
+                                <div class="file-upload">
+                                    <input type="file" class="form-control" id="contactFile" name="file" 
+                                           accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
+                                           aria-describedby="fileHelp">
+                                    <label for="contactFile" class="file-upload-label">
+                                        <i class="fas fa-cloud-upload-alt me-2" aria-hidden="true"></i>
+                                        <span>Click to upload files</span>
+                                        <span id="contactFileName">PDF, DOC, JPG, PNG (max 400 KB)</span>
+                                    </label>
+                                    <div id="fileHelp" class="form-text">Maximum file size: 400KB. Allowed types: PDF, DOC, DOCX, JPG, PNG.</div>
+                                </div>
+                            </div> -->
+                            
+                            <!-- Submit Button -->
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-lg px-5 py-3">
+                                    <i class="fas fa-paper-plane me-2" aria-hidden="true"></i>Send Message
+                                </button>
+                            </div>
+                            
+                            <!-- Form Status Message -->
+                            <div id="formStatus" class="mt-3 text-center" role="alert" aria-live="polite"></div>
+                        </form>
+                    </div>
+                    
+                    <!-- Map Below Form on Mobile -->
+                    <div class="map-container mt-4 d-lg-none">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.5889757451187!2d76.94422147446838!3d28.40147989453743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d3d001ccd8197%3A0xc11524f0835dc6a8!2sSS%20omnia%20sector%2086!5e0!3m2!1sen!2sin!4v1762922339832!5m2!1sen!2sin"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            title="Innometrics Automation Office Location"></iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Map Below on Desktop -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="map-container d-none d-lg-block">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.5889757451187!2d76.94422147446838!3d28.40147989453743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d3d001ccd8197%3A0xc11524f0835dc6a8!2sSS%20omnia%20sector%2086!5e0!3m2!1sen!2sin!4v1762922339832!5m2!1sen!2sin"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            title="Innometrics Automation Office Location"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="pt-5" aria-label="Footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <img src="https://img1.wsimg.com/isteam/ip/479937e0-1a04-4dd1-869b-d26ee9f6881e/WhatsApp%20Image%202025-08-05%20at%204.48.57%20-6a865c5.jpeg"
+                         alt="Innometrics Automation & Controls Logo" 
+                         loading="lazy"
+                         width="80"
+                         height="80"
+                         class="footer-logo">
+                    <p class="mt-3">Leading provider of industrial automation and control solutions, dedicated to enhancing productivity, efficiency, and reliability.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#home" class="text-light text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="#about" class="text-light text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="#careers" class="text-light text-decoration-none">Careers</a></li>
+                        <li class="mb-2"><a href="#contact" class="text-light text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-phone me-2" aria-hidden="true"></i> +91 9730013049, +91 7503020064,</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2" aria-hidden="true"></i>
+                            <a href="mailto:hr@innometricsautomation.com" class="text-light text-decoration-none">
+                                hr@innometricsautomation.com (HR)
+                            </a>
+                        </li>
+                        <p><i class="fas fa-map-marker-alt text-warning me-2" aria-hidden="true"></i>
+                            <span class="fw-bold">Regd. Office:</span> 3rd floor, Shop No. 22, H.NO. 30,            
+                                 ShivMandir, Carterpuri, 
+                                 Gurugram-122001 (Haryana)
+                        </p>
+                        <p><i class="fas fa-map-marker-alt text-warning me-2" aria-hidden="true"></i>
+                            <span class="fw-bold">Corporate Office:</span> 711, 7th Floor, SS Omnia Commercial, Sector 86, Gurugram, Haryana 122012
+                        </p>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p>&copy; <span id="currentYear">2022</span> <strong>Innometrics Automation & Controls LLP</strong>. All Rights Reserved.| Designed & Developed by AdiYogi Technosoft.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="float-buttons">
+        <a href="tel:+919730013049" class="call-btn" title="Call Now" aria-label="Call Innometrics Automation & Controls">
+            <i class="fas fa-phone" aria-hidden="true"></i>
+        </a>
+        <a href="#" class="whatsapp-btn" title="Chat on WhatsApp" aria-label="Chat with Innometrics on WhatsApp" onclick="openWhatsApp()">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+        </a>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="successModalLabel">Message Sent!</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="mb-3">
+                        <i class="fas fa-check-circle text-success" style="font-size: 4rem;" aria-hidden="true"></i>
+                    </div>
+                    <h4 class="mb-3">Thank You!</h4>
+                    <p>Your message has been successfully sent.</p>
+                    <p>Our team will get back to you within 24 hours.</p>
+                    <div class="mt-4">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Modal -->
+    <div class="modal fade" id="loadingModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-body text-center p-5">
+                    <div class="spinner-border text-warning mb-3" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <h5>Sending your message...</h5>
+                    <p class="mb-0">Please wait a moment</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
